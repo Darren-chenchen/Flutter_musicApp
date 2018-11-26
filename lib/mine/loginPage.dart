@@ -17,9 +17,11 @@ class LoginPageState extends State<LoginPage> {
     super.initState();
 
     UserTools.instance.getUserData().then((user) {
+      print(user);
       if (user["userName"]) {
         _controller.text = user["userName"];
       }
+
     });
   }
 
